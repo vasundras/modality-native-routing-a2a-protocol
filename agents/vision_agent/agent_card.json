@@ -1,0 +1,46 @@
+{
+  "name": "VisionAgent",
+  "description": "Vision processing agent that analyzes images using multimodal AI to identify product defects, assembly issues, and visual troubleshooting scenarios.",
+  "url": "http://localhost:8082",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "authentication": {
+    "schemes": []
+  },
+  "defaultInputModes": ["image"],
+  "defaultOutputModes": ["text"],
+  "skills": [
+    {
+      "id": "image_analysis",
+      "name": "Product Image Analysis",
+      "description": "Analyze product images to identify defects, damage, assembly issues, and visual troubleshooting scenarios for customer service.",
+      "tags": ["computer-vision", "defect-detection", "product-analysis", "troubleshooting"],
+      "examples": [
+        "Identify visible damage in product photos",
+        "Analyze assembly progress and identify missing steps",
+        "Detect error indicators on device displays",
+        "Assess product condition for warranty claims"
+      ],
+      "inputModes": ["image"],
+      "outputModes": ["text"]
+    },
+    {
+      "id": "visual_qa",
+      "name": "Visual Question Answering",
+      "description": "Answer specific questions about image content, focusing on customer service scenarios like warranty assessment and troubleshooting.",
+      "tags": ["visual-qa", "image-understanding", "customer-service", "warranty"],
+      "examples": [
+        "Is this product damaged or defective?",
+        "What error code is shown on the display?",
+        "Are all assembly components present?",
+        "What is the condition of this product?"
+      ],
+      "inputModes": ["image"],
+      "outputModes": ["text"]
+    }
+  ]
+}

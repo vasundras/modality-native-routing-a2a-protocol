@@ -1,0 +1,15 @@
+.DS_Store
+.env
+# Scratch runs only; paper runs (run1-*, run2-*) are tracked for reproducibility
+results/dev-runs/
+# Ad-hoc evaluate.py output at results/ root (paired runs keep evaluation_*.json under run*/)
+results/evaluation_*.json
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+benchmark/data/audio/
+benchmark/data/images/
+*.wav
+*.mp3
+node_modules/

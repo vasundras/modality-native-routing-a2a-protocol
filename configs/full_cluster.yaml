@@ -1,0 +1,66 @@
+# Full Cluster Mode — 4× A100 80GB, ~$25-45 on RunPod/Lambda spot
+# One model per node. This is the paper's described setup.
+
+mode: self_hosted
+
+agents:
+  voice:
+    backend: faster_whisper
+    model: large-v3
+    device: cuda:0
+    compute_type: float16
+    host: voice-node  # or IP address of node 1
+    input_modes: ["audio/wav", "audio/webm"]
+    output_modes: ["text/plain"]
+    port: 8081
+
+  vision:
+    backend: transformers
+    model: llava-hf/llava-next-72b-hf  # full LLaVA-NeXT on dedicated GPU
+    device: cuda:0
+    torch_dtype: float16
+    host: vision-node  # node 2
+    input_modes: ["image/png", "image/jpeg"]
+    output_modes: ["text/plain"]
+    port: 8082
+
+  text:
+    backend: vllm
+    model: meta-llama/Meta-Llama-3-70B-Instruct  # full precision on dedicated GPU
+    device: cuda:0
+    max_model_len: 8192
+    host: text-node  # node 3
+    input_modes: ["text/plain"]
+    output_modes: ["text/plain"]
+    port: 8083
+
+oracle:
+  backend: google
+  model: gemini-1.5-pro
+
+mar:
+  host: orchestrator-node  # node 4
+  port: 8080
+  agent_card_cache_ttl_seconds: 60
+  force_text_mode: false
+
+orchestrator:
+  host: orchestrator-node  # same node as MAR
+  port: 8084
+  max_parallel_subtasks: 3  # voice + vision can run in parallel
+  timeout_seconds: 30
+
+benchmark:
+  data_dir: benchmark/data
+  num_tasks: 1200
+  categories:
+    - product_defect_report
+    - assembly_guidance
+    - visual_troubleshooting
+    - warranty_claim
+
+evaluation:
+  num_runs: 3
+  significance_test: bootstrap
+  bootstrap_resamples: 10000
+  output_dir: results

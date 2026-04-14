@@ -1,0 +1,44 @@
+{
+  "name": "VoiceAgent",
+  "description": "Voice processing agent that transcribes audio using Whisper and provides analysis of customer speech patterns and sentiment.",
+  "url": "http://localhost:8081",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "authentication": {
+    "schemes": []
+  },
+  "defaultInputModes": ["voice"],
+  "defaultOutputModes": ["text"],
+  "skills": [
+    {
+      "id": "speech_transcription",
+      "name": "Speech Transcription",
+      "description": "Convert audio speech to text using Whisper ASR with high accuracy for customer service calls.",
+      "tags": ["speech-to-text", "transcription", "whisper", "audio"],
+      "examples": [
+        "Transcribe customer complaint about product defect",
+        "Convert assembly instruction question to text",
+        "Process warranty claim audio recording"
+      ],
+      "inputModes": ["voice"],
+      "outputModes": ["text"]
+    },
+    {
+      "id": "sentiment_analysis",
+      "name": "Voice Sentiment Analysis", 
+      "description": "Analyze emotional tone, urgency, and satisfaction level from customer voice patterns.",
+      "tags": ["sentiment", "emotion", "urgency", "customer-satisfaction"],
+      "examples": [
+        "Detect frustration in customer complaint",
+        "Identify urgent safety concerns from voice tone",
+        "Measure satisfaction level in feedback"
+      ],
+      "inputModes": ["voice"],
+      "outputModes": ["text"]
+    }
+  ]
+}

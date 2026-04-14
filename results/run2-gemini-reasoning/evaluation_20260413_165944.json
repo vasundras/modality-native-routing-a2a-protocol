@@ -1,0 +1,239 @@
+{
+  "mma2a": {
+    "accuracy": {
+      "overall": {
+        "correct": 26,
+        "total": 50,
+        "accuracy": 0.52
+      },
+      "by_category": {
+        "assembly_guidance": {
+          "correct": 7,
+          "total": 12,
+          "accuracy": 0.5833
+        },
+        "product_defect_report": {
+          "correct": 6,
+          "total": 13,
+          "accuracy": 0.4615
+        },
+        "visual_troubleshooting": {
+          "correct": 11,
+          "total": 12,
+          "accuracy": 0.9167
+        },
+        "warranty_claim": {
+          "correct": 2,
+          "total": 13,
+          "accuracy": 0.1538
+        }
+      }
+    },
+    "latency": {
+      "overall": {
+        "mean": 13.0432,
+        "median": 9.4209,
+        "stdev": 6.3943,
+        "p95": 23.6236,
+        "min": 5.4267,
+        "max": 24.8913,
+        "n": 50
+      },
+      "by_category": {
+        "assembly_guidance": {
+          "mean": 9.6567,
+          "median": 8.8096,
+          "stdev": 4.8032,
+          "n": 12
+        },
+        "product_defect_report": {
+          "mean": 16.5491,
+          "median": 18.1899,
+          "stdev": 6.2281,
+          "n": 13
+        },
+        "visual_troubleshooting": {
+          "mean": 14.5097,
+          "median": 13.6087,
+          "stdev": 6.7462,
+          "n": 12
+        },
+        "warranty_claim": {
+          "mean": 11.3098,
+          "median": 8.768,
+          "stdev": 5.9253,
+          "n": 13
+        }
+      }
+    },
+    "bandwidth": {
+      "request": {
+        "mean": 324383.0,
+        "total": 16219137
+      },
+      "response": {
+        "mean": 5768.0,
+        "total": 288405
+      },
+      "total": {
+        "mean": 330151.0,
+        "total": 16507542
+      },
+      "n": 50
+    },
+    "routing": {
+      "total_decisions": 218,
+      "native": 178,
+      "transcode": 40,
+      "native_pct": 81.7,
+      "transcode_pct": 18.3,
+      "by_modality": {
+        "image": {
+          "native": 28,
+          "transcode": 12,
+          "native_pct": 70.0
+        },
+        "text": {
+          "native": 110,
+          "transcode": 28,
+          "native_pct": 79.7
+        },
+        "voice": {
+          "native": 40,
+          "transcode": 0,
+          "native_pct": 100.0
+        }
+      }
+    }
+  },
+  "text-bn": {
+    "accuracy": {
+      "overall": {
+        "correct": 16,
+        "total": 50,
+        "accuracy": 0.32
+      },
+      "by_category": {
+        "assembly_guidance": {
+          "correct": 5,
+          "total": 12,
+          "accuracy": 0.4167
+        },
+        "product_defect_report": {
+          "correct": 1,
+          "total": 13,
+          "accuracy": 0.0769
+        },
+        "visual_troubleshooting": {
+          "correct": 9,
+          "total": 12,
+          "accuracy": 0.75
+        },
+        "warranty_claim": {
+          "correct": 1,
+          "total": 13,
+          "accuracy": 0.0769
+        }
+      }
+    },
+    "latency": {
+      "overall": {
+        "mean": 7.1942,
+        "median": 5.9333,
+        "stdev": 4.4604,
+        "p95": 14.5661,
+        "min": 2.7618,
+        "max": 24.1813,
+        "n": 50
+      },
+      "by_category": {
+        "assembly_guidance": {
+          "mean": 9.6652,
+          "median": 8.4744,
+          "stdev": 4.8773,
+          "n": 12
+        },
+        "product_defect_report": {
+          "mean": 3.9599,
+          "median": 3.7392,
+          "stdev": 1.1178,
+          "n": 13
+        },
+        "visual_troubleshooting": {
+          "mean": 11.025,
+          "median": 9.4985,
+          "stdev": 4.4241,
+          "n": 12
+        },
+        "warranty_claim": {
+          "mean": 4.6115,
+          "median": 4.6622,
+          "stdev": 0.9493,
+          "n": 13
+        }
+      }
+    },
+    "bandwidth": {
+      "request": {
+        "mean": 324387.0,
+        "total": 16219337
+      },
+      "response": {
+        "mean": 4115.0,
+        "total": 205772
+      },
+      "total": {
+        "mean": 328502.0,
+        "total": 16425109
+      },
+      "n": 50
+    },
+    "routing": {
+      "total_decisions": 218,
+      "native": 110,
+      "transcode": 108,
+      "native_pct": 50.5,
+      "transcode_pct": 49.5,
+      "by_modality": {
+        "image": {
+          "native": 0,
+          "transcode": 40,
+          "native_pct": 0.0
+        },
+        "text": {
+          "native": 110,
+          "transcode": 28,
+          "native_pct": 79.7
+        },
+        "voice": {
+          "native": 0,
+          "transcode": 40,
+          "native_pct": 0.0
+        }
+      }
+    }
+  },
+  "comparison": {
+    "paired_tasks": 50,
+    "latency": {
+      "mma2a_mean": 13.0432,
+      "textbn_mean": 7.1942,
+      "improvement_seconds": -5.849,
+      "improvement_pct": -81.3,
+      "t_statistic": -5.7583,
+      "p_value": 0.0,
+      "significant": true
+    },
+    "accuracy": {
+      "mma2a": 0.52,
+      "textbn": 0.32,
+      "mma2a_correct": 26,
+      "textbn_correct": 16
+    },
+    "bandwidth": {
+      "mma2a_mean_bytes": 330151.0,
+      "textbn_mean_bytes": 328502.0,
+      "overhead_pct": 0.5
+    }
+  }
+}

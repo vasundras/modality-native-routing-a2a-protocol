@@ -1,0 +1,43 @@
+{
+  "name": "TextAgent",
+  "description": "Customer service text agent that processes text queries, searches knowledge bases, and provides warranty/product information.",
+  "url": "http://localhost:8001",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "authentication": {
+    "schemes": []
+  },
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text"],
+  "skills": [
+    {
+      "id": "knowledge_query",
+      "name": "Knowledge Base Query",
+      "description": "Search product information, warranty terms, troubleshooting guides, and assembly instructions.",
+      "tags": ["customer-service", "product-info", "warranty", "troubleshooting"],
+      "examples": [
+        "What is the warranty on the BlenderMax 3000?",
+        "How do I assemble step 4 of the KALLAX shelf?",
+        "What does error code E3 mean on my washing machine?"
+      ],
+      "inputModes": ["text"],
+      "outputModes": ["text"]
+    },
+    {
+      "id": "action_recommendation",
+      "name": "Action Recommendation",
+      "description": "Recommend customer service actions based on product context and customer situation.",
+      "tags": ["customer-service", "warranty", "returns", "escalation"],
+      "examples": [
+        "Customer dropped their blender and blade is bent. What action should we take?",
+        "Product arrived damaged in box. Recommend next steps."
+      ],
+      "inputModes": ["text"],
+      "outputModes": ["text"]
+    }
+  ]
+}

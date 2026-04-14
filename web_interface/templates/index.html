@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMA2A System - Multimodal Test Interface</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .system-status { background: #f8f9fa; border-left: 4px solid #28a745; }
+        .status-healthy { color: #28a745; }
+        .status-unhealthy { color: #dc3545; }
+        .routing-mode { background: #e3f2fd; border-left: 4px solid #2196f3; }
+        .result-section { background: #fff3cd; border-left: 4px solid #ffc107; }
+        .file-upload-area { border: 2px dashed #dee2e6; border-radius: 8px; padding: 20px; text-align: center; transition: all 0.3s; }
+        .file-upload-area:hover { border-color: #007bff; background-color: #f8f9fa; }
+        .file-uploaded { border-color: #28a745; background-color: #d4edda; }
+        .task-category-info { font-size: 0.875rem; color: #6c757d; }
+        .metadata-section { background: #f1f3f4; border-radius: 6px; padding: 15px; margin-top: 15px; }
+        .routing-decision { background: #e8f5e8; border-left: 3px solid #28a745; padding: 8px 12px; margin: 4px 0; border-radius: 4px; }
+        .routing-decision.transcode { background: #fff3cd; border-left-color: #ffc107; }
+        .execution-timeline { background: #f8f9fa; border-radius: 6px; padding: 15px; }
+        .subtask-item { border-left: 3px solid #007bff; padding: 8px 12px; margin: 4px 0; background: white; border-radius: 0 4px 4px 0; }
+        .subtask-completed { border-left-color: #28a745; }
+        .subtask-failed { border-left-color: #dc3545; }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-md-8">
+                <div class="card mt-4">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0"><i class="fas fa-robot"></i> MMA2A System - Multimodal Test Interface</h3>
+                        <small>Test cross-modal customer service tasks with voice, image, and text inputs</small>
+                    </div>
+                    <div class="card-body">
+                        <form id="taskForm" enctype="multipart/form-data">
+                            <!-- Text Input -->
+                            <div class="mb-4">
+                                <label for="textInput" class="form-label"><i class="fas fa-comment"></i> Text Input</label>
+                                <textarea class="form-control" id="textInput" name="text_input" rows="3" 
+                                    placeholder="Describe your customer service issue... (e.g., 'I need help with this broken product for warranty assessment')"></textarea>
+                                <div class="form-text">Describe the customer's issue, question, or request</div>
+                            </div>
+
+                            <!-- Image Upload -->
+                            <div class="mb-4">
+                                <label class="form-label"><i class="fas fa-image"></i> Image Upload</label>
+                                <div class="file-upload-area" id="imageUploadArea">
+                                    <input type="file" class="form-control" id="imageFile" name="image_file" accept="image/*" style="display: none;">
+                                    <i class="fas fa-cloud-upload-alt fa-2x text-muted mb-2"></i>
+                                    <p class="mb-2">Click to upload an image or drag and drop</p>
+                                    <small class="text-muted">Product photos, defect images, assembly progress, error screens</small>
+                                </div>
+                                <div id="imagePreview" class="mt-2" style="display: none;">
+                                    <img id="previewImg" src="" alt="Preview" class="img-thumbnail" style="max-height: 200px;">
+                                    <button type="button" class="btn btn-sm btn-outline-danger ms-2" id="removeImage">Remove</button>
+                                </div>
+                            </div>
+
+                            <!-- Audio Upload -->
+                            <div class="mb-4">
+                                <label class="form-label"><i class="fas fa-microphone"></i> Audio Upload</label>
+                                <div class="file-upload-area" id="audioUploadArea">
+                                    <input type="file" class="form-control" id="audioFile" name="audio_file" accept="audio/*" style="display: none;">
+                                    <i class="fas fa-microphone fa-2x text-muted mb-2"></i>
+                                    <p class="mb-2">Click to upload audio or drag and drop</p>
+                                    <small class="text-muted">Customer complaints, questions, or descriptions (WAV, MP3, etc.)</small>
+                                </div>
+                                <div id="audioPreview" class="mt-2" style="display: none;">
+                                    <audio id="previewAudio" controls class="w-100"></audio>
+                                    <button type="button" class="btn btn-sm btn-outline-danger mt-2" id="removeAudio">Remove</button>
+                                </div>
+                            </div>
+
+                            <!-- Task Configuration -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="taskCategory" class="form-label"><i class="fas fa-tags"></i> Task Category</label>
+                                    <select class="form-select" id="taskCategory" name="task_category">
+                                        <option value="product_defect_report">Product Defect Report</option>
+                                        <option value="warranty_claim">Warranty Claim</option>
+                                        <option value="assembly_guidance">Assembly Guidance</option>
+                                        <option value="visual_troubleshooting">Visual Troubleshooting</option>
+                                    </select>
+                                    <div class="task-category-info mt-1" id="categoryInfo">
+                                        Customer reporting product defects or damage
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="routingMode" class="form-label"><i class="fas fa-route"></i> Routing Mode</label>
+                                    <select class="form-select" id="routingMode" name="routing_mode">
+                                        <option value="mma2a">MMA2A (Native Routing)</option>
+                                        <option value="text_bn">Text-BN (Baseline)</option>
+                                    </select>
+                                    <div class="form-text">
+                                        <strong>MMA2A:</strong> Routes parts natively when supported<br>
+                                        <strong>Text-BN:</strong> Forces all parts to text (baseline)
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                                    <i class="fas fa-paper-plane"></i> Submit Task
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div id="resultsSection" class="card mt-4" style="display: none;">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0"><i class="fas fa-check-circle"></i> Task Results</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="resultsContent"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <!-- System Status -->
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h6 class="mb-0"><i class="fas fa-heartbeat"></i> System Status</h6>
+                    </div>
+                    <div class="card-body system-status">
+                        <div id="systemStatus">
+                            <div class="text-center">
+                                <div class="spinner-border spinner-border-sm" role="status"></div>
+                                <span class="ms-2">Checking system health...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Routing Mode -->
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h6 class="mb-0"><i class="fas fa-route"></i> Current Mode</h6>
+                    </div>
+                    <div class="card-body routing-mode">
+                        <div id="currentMode">
+                            <span class="badge bg-primary">MMA2A Mode</span>
+                            <p class="mt-2 mb-0 small">Native routing when agents support the modality</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Examples -->
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h6 class="mb-0"><i class="fas fa-lightbulb"></i> Example Scenarios</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="small">
+                            <p><strong>Defect Report:</strong> "My blender is making noise" + photo of damage</p>
+                            <p><strong>Warranty Claim:</strong> "I need a replacement" + audio complaint + product image</p>
+                            <p><strong>Assembly Help:</strong> "Stuck on step 4" + photo of current progress</p>
+                            <p class="mb-0"><strong>Troubleshooting:</strong> Photo of error screen + description</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Task category descriptions
+        const categoryDescriptions = {
+            'product_defect_report': 'Customer reporting product defects or damage',
+            'warranty_claim': 'Customer making warranty or return claims',
+            'assembly_guidance': 'Customer needing help with product assembly',
+            'visual_troubleshooting': 'Customer troubleshooting issues with visual evidence'
+        };
+
+        // File upload handling
+        function setupFileUpload(areaId, inputId, previewId, removeId) {
+            const area = document.getElementById(areaId);
+            const input = document.getElementById(inputId);
+            const preview = document.getElementById(previewId);
+            const removeBtn = document.getElementById(removeId);
+
+            area.addEventListener('click', () => input.click());
+            area.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                area.style.borderColor = '#007bff';
+            });
+            area.addEventListener('dragleave', () => {
+                area.style.borderColor = '#dee2e6';
+            });
+            area.addEventListener('drop', (e) => {
+                e.preventDefault();
+                area.style.borderColor = '#dee2e6';
+                if (e.dataTransfer.files.length > 0) {
+                    input.files = e.dataTransfer.files;
+                    handleFileSelect(input, area, preview);
+                }
+            });
+
+            input.addEventListener('change', () => handleFileSelect(input, area, preview));
+            removeBtn.addEventListener('click', () => {
+                input.value = '';
+                preview.style.display = 'none';
+                area.classList.remove('file-uploaded');
+            });
+        }
+
+        function handleFileSelect(input, area, preview) {
+            if (input.files.length > 0) {
+                const file = input.files[0];
+                area.classList.add('file-uploaded');
+                preview.style.display = 'block';
+
+                if (input.id === 'imageFile') {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        document.getElementById('previewImg').src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                } else if (input.id === 'audioFile') {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        document.getElementById('previewAudio').src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        }
+
+        // Initialize file uploads
+        setupFileUpload('imageUploadArea', 'imageFile', 'imagePreview', 'removeImage');
+        setupFileUpload('audioUploadArea', 'audioFile', 'audioPreview', 'removeAudio');
+
+        // Task category change handler
+        document.getElementById('taskCategory').addEventListener('change', function() {
+            document.getElementById('categoryInfo').textContent = categoryDescriptions[this.value];
+        });
+
+        // Form submission
+        document.getElementById('taskForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.innerHTML;
+            
+            try {
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                submitBtn.disabled = true;
+
+                const formData = new FormData(this);
+                const response = await fetch('/submit-task', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+                
+                if (result.success) {
+                    displayResults(result);
+                    document.getElementById('resultsSection').style.display = 'block';
+                    document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    throw new Error(result.detail || 'Task submission failed');
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+            } finally {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Display results
+        function displayResults(result) {
+            const content = document.getElementById('resultsContent');
+            const taskResult = result.result;
+            const metadata = taskResult.metadata || {};
+            const orchestrator = metadata.orchestrator || {};
+            const marRouting = metadata.mar_routing || {};
+
+            let html = `
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6><i class="fas fa-info-circle"></i> Task Overview</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Task ID:</strong> ${taskResult.id}</li>
+                            <li><strong>Status:</strong> <span class="badge bg-success">${taskResult.status.state}</span></li>
+                            <li><strong>Routing Mode:</strong> <span class="badge ${result.routing_mode === 'mma2a' ? 'bg-primary' : 'bg-warning'}">${result.routing_mode.toUpperCase()}</span></li>
+                            <li><strong>Duration:</strong> ${(orchestrator.actual_duration || 0).toFixed(2)}s</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6><i class="fas fa-cogs"></i> Execution Summary</h6>
+                        <ul class="list-unstyled">
+                            <li><strong>Task Type:</strong> ${orchestrator.task_plan?.task_type || 'unknown'}</li>
+                            <li><strong>Subtasks:</strong> ${orchestrator.subtasks_executed || 0}</li>
+                            <li><strong>Target Agent:</strong> ${marRouting.target_agent || 'unknown'}</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+
+            // Routing decisions
+            if (marRouting.routing_decisions && marRouting.routing_decisions.length > 0) {
+                html += `
+                    <div class="metadata-section">
+                        <h6><i class="fas fa-route"></i> Routing Decisions</h6>
+                `;
+                marRouting.routing_decisions.forEach(decision => {
+                    const isTranscode = decision.action === 'transcode';
+                    html += `
+                        <div class="routing-decision ${isTranscode ? 'transcode' : ''}">
+                            <strong>${decision.part_modality}</strong> → ${decision.action}
+                            <br><small>${decision.reasoning}</small>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            }
+
+            // Subtask execution
+            if (orchestrator.execution_summary) {
+                html += `
+                    <div class="execution-timeline">
+                        <h6><i class="fas fa-tasks"></i> Subtask Execution</h6>
+                `;
+                Object.entries(orchestrator.execution_summary).forEach(([subtaskId, info]) => {
+                    const statusClass = info.status === 'completed' ? 'subtask-completed' : 
+                                       info.status === 'failed' ? 'subtask-failed' : '';
+                    html += `
+                        <div class="subtask-item ${statusClass}">
+                            <strong>${subtaskId}</strong>: ${info.status}
+                            ${info.duration ? `(${info.duration.toFixed(2)}s)` : ''}
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            }
+
+            // Final response
+            const responseParts = taskResult.status.message?.parts || [];
+            if (responseParts.length > 0) {
+                const responseText = responseParts[0].text || '';
+                html += `
+                    <div class="metadata-section">
+                        <h6><i class="fas fa-comment-dots"></i> System Response</h6>
+                        <div class="bg-white p-3 border rounded">
+                            <pre class="mb-0" style="white-space: pre-wrap; font-family: inherit;">${responseText}</pre>
+                        </div>
+                    </div>
+                `;
+            }
+
+            content.innerHTML = html;
+        }
+
+        // Load system status
+        async function loadSystemStatus() {
+            try {
+                const response = await fetch('/health');
+                const status = await response.json();
+                
+                let html = '';
+                Object.entries(status).forEach(([service, info]) => {
+                    const icon = info.healthy ? 'fas fa-check-circle status-healthy' : 'fas fa-times-circle status-unhealthy';
+                    const statusText = info.healthy ? 'Healthy' : 'Unhealthy';
+                    html += `
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>${service.replace('_', ' ').toUpperCase()}</span>
+                            <span><i class="${icon}"></i> ${statusText}</span>
+                        </div>
+                    `;
+                });
+                
+                document.getElementById('systemStatus').innerHTML = html;
+            } catch (error) {
+                document.getElementById('systemStatus').innerHTML = `
+                    <div class="text-danger">
+                        <i class="fas fa-exclamation-triangle"></i> Error checking system status
+                    </div>
+                `;
+            }
+        }
+
+        // Load system status on page load
+        loadSystemStatus();
+        
+        // Refresh status every 30 seconds
+        setInterval(loadSystemStatus, 30000);
+    </script>
+</body>
+</html>

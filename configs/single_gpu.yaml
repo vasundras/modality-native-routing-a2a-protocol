@@ -1,0 +1,62 @@
+# Single GPU Mode — 1× A100 80GB, ~$5-10 total on RunPod spot
+# Self-hosted models, run sequentially (shared GPU)
+
+mode: self_hosted
+
+agents:
+  voice:
+    backend: faster_whisper
+    model: large-v3
+    device: cuda:0
+    compute_type: float16
+    input_modes: ["audio/wav", "audio/webm"]
+    output_modes: ["text/plain"]
+    port: 8081
+
+  vision:
+    backend: transformers
+    model: llava-hf/llava-v1.6-mistral-7b-hf  # 7B fits alongside other models
+    device: cuda:0
+    torch_dtype: float16
+    input_modes: ["image/png", "image/jpeg"]
+    output_modes: ["text/plain"]
+    port: 8082
+
+  text:
+    backend: vllm
+    model: TheBloke/Llama-3-70B-Instruct-AWQ  # 4-bit, ~40GB VRAM
+    device: cuda:0
+    quantization: awq
+    max_model_len: 4096  # keep short to avoid OOM
+    input_modes: ["text/plain"]
+    output_modes: ["text/plain"]
+    port: 8083
+
+oracle:
+  backend: google  # still use API for oracle — it's the upper bound
+  model: gemini-1.5-pro
+
+mar:
+  port: 8080
+  agent_card_cache_ttl_seconds: 60
+  force_text_mode: false
+
+orchestrator:
+  port: 8084
+  max_parallel_subtasks: 1  # single GPU = sequential only
+  timeout_seconds: 60
+
+benchmark:
+  data_dir: benchmark/data
+  num_tasks: 1200
+  categories:
+    - product_defect_report
+    - assembly_guidance
+    - visual_troubleshooting
+    - warranty_claim
+
+evaluation:
+  num_runs: 3
+  significance_test: bootstrap
+  bootstrap_resamples: 10000
+  output_dir: results

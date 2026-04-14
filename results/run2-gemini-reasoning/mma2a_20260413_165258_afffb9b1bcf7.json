@@ -1,0 +1,3864 @@
+{
+  "run_id": "afffb9b1bcf7",
+  "mode": "mma2a",
+  "timestamp": "2026-04-13T23:52:58.405471+00:00",
+  "task_count": 50,
+  "results": [
+    {
+      "task_id": "defect_001",
+      "run_id": "mma2a_defect_001_ad682723",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 22.9386,
+      "request_bytes": 379225,
+      "response_bytes": 9986,
+      "total_bytes": 389211,
+      "ground_truth_action": "deny_warranty",
+      "predicted_action": "deny_warranty",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_001_ad682723_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_001_ad682723_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_001_ad682723_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_001_ad682723_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: deny_warranty\nReasoning: The customer explicitly stated they dropped the product, which caused the damage. The product warranty specifically excludes physical damage from drops.\nConfidence: 100%",
+      "data_source": {
+        "audio": "real",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:42:04.382489+00:00"
+    },
+    {
+      "task_id": "defect_002",
+      "run_id": "mma2a_defect_002_9602920b",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 20.1638,
+      "request_bytes": 612489,
+      "response_bytes": 9321,
+      "total_bytes": 621810,
+      "ground_truth_action": "initiate_replacement",
+      "predicted_action": "initiate_replacement",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_002_9602920b_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_002_9602920b_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_002_9602920b_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_002_9602920b_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: initiate_replacement\nReasoning: The customer reported the coffee maker carafe was cracked right out of the box, qualifying as Damage on Arrival (DOA). The product warranty explicitly covers 'damage on arrival' and notes a free replacement for DOA items within 7 days.\nConfidence: ",
+      "data_source": {
+        "audio": "real",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:42:25.058012+00:00"
+    },
+    {
+      "task_id": "defect_003",
+      "run_id": "mma2a_defect_003_d9307227",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 19.9753,
+      "request_bytes": 567701,
+      "response_bytes": 9945,
+      "total_bytes": 577646,
+      "ground_truth_action": "initiate_replacement",
+      "predicted_action": "initiate_replacement",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_003_d9307227_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_003_d9307227_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_003_d9307227_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_003_d9307227_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: initiate_replacement\nReasoning: The toaster is sparking, which is a severe safety hazard and an electrical defect covered under warranty. As per safety policy, sparking reports warrant immediate replacement, especially given the product is only two weeks old.\nConfidence: 100%",
+      "data_source": {
+        "audio": "real",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:42:45.544809+00:00"
+    },
+    {
+      "task_id": "defect_004",
+      "run_id": "mma2a_defect_004_5407cbd4",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 21.7548,
+      "request_bytes": 1818601,
+      "response_bytes": 9219,
+      "total_bytes": 1827820,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "initiate_replacement",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_004_5407cbd4_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_004_5407cbd4_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_004_5407cbd4_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_004_5407cbd4_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: initiate_replacement\nReasoning: The laptop stand is within its 3-year warranty period, and a snapped hinge is explicitly covered as a structural defect, with no evidence of exclusions like overloading.\nConfidence: 95%",
+      "data_source": {
+        "audio": "real",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:43:07.815659+00:00"
+    },
+    {
+      "task_id": "defect_005",
+      "run_id": "mma2a_defect_005_05d4e169",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 15.6674,
+      "request_bytes": 518172,
+      "response_bytes": 4550,
+      "total_bytes": 522722,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "initiate_replacement",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_005_05d4e169_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_005_05d4e169_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_005_05d4e169_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_005_05d4e169_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: initiate_replacement\nReasoning: The customer's tablet has a display failure (flickering then black screen) which is explicitly covered under the 2-year warranty. The device is within the warranty period and there is no evidence of exclusions like water or drop damage.\nConfidence:",
+      "data_source": {
+        "audio": "real",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:43:23.994081+00:00"
+    },
+    {
+      "task_id": "defect_006",
+      "run_id": "mma2a_defect_006_b4d2b8af",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 8.9658,
+      "request_bytes": 793497,
+      "response_bytes": 4623,
+      "total_bytes": 798120,
+      "ground_truth_action": "escalate_to_specialist",
+      "predicted_action": "initiate_replacement",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "text_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support image, transcoding to text"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_006_b4d2b8af_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_006_b4d2b8af_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_006_b4d2b8af_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_006_b4d2b8af_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: initiate_replacement\nReasoning: The non-stick coating is peeling after 8 months, which falls within the 2-year warranty for coating degradation under normal use. Peeling coating into food is a safety concern for a cooking product.\nConfidence: 95%",
+      "data_source": {
+        "audio": "real",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:43:33.470967+00:00"
+    },
+    {
+      "task_id": "defect_007",
+      "run_id": "mma2a_defect_007_e259c3da",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 24.8913,
+      "request_bytes": 471477,
+      "response_bytes": 9238,
+      "total_bytes": 480715,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_007_e259c3da_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_007_e259c3da_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_007_e259c3da_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_007_e259c3da_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The customer has a covered charging issue and has performed some basic troubleshooting. Additional steps, such as cleaning the charging contacts and checking for debris in the port, are available and have not been explicitly tried, which might resolve",
+      "data_source": {
+        "audio": "real",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:43:58.868519+00:00"
+    },
+    {
+      "task_id": "defect_008",
+      "run_id": "mma2a_defect_008_affa3150",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 23.6463,
+      "request_bytes": 1227866,
+      "response_bytes": 10750,
+      "total_bytes": 1238616,
+      "ground_truth_action": "initiate_replacement",
+      "predicted_action": "initiate_replacement",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_008_affa3150_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_008_affa3150_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_008_affa3150_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_008_affa3150_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: initiate_replacement\nReasoning: The backpack's stitching, explicitly covered by a lifetime warranty, failed after only two weeks under normal use, indicating a manufacturing defect. A full replacement is the most appropriate resolution for this clear warranty claim.\nConfidence: 1",
+      "data_source": {
+        "audio": "real",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:44:23.034607+00:00"
+    },
+    {
+      "task_id": "defect_009",
+      "run_id": "mma2a_defect_009_ca772e4f",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 9.8357,
+      "request_bytes": 271925,
+      "response_bytes": 4426,
+      "total_bytes": 276351,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_009_ca772e4f_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_009_ca772e4f_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_009_ca772e4f_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_009_ca772e4f_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The customer's description of the robot vacuum bumping into objects matches a known issue (dirty sensors) which can be resolved by user troubleshooting steps, as indicated by the 'Requires service: False' flag.\nConfidence: 95%",
+      "data_source": {
+        "audio": "real",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:44:33.380692+00:00"
+    },
+    {
+      "task_id": "defect_010",
+      "run_id": "mma2a_defect_010_6a8c67de",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 11.6037,
+      "request_bytes": 375477,
+      "response_bytes": 4685,
+      "total_bytes": 380162,
+      "ground_truth_action": "order_part",
+      "predicted_action": "approve_warranty",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "text_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support image, transcoding to text"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_010_6a8c67de_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_010_6a8c67de_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_010_6a8c67de_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_010_6a8c67de_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: order_part\nReasoning: The customer's issue with the lid not sealing properly points to a fault in the lid mechanism or gasket, both of which are covered under warranty (gasket for 6 months, lid mechanism for 2 years). Ordering a replacement part, such as a gasket, is the most dir",
+      "data_source": {
+        "audio": "real",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:44:45.492585+00:00"
+    },
+    {
+      "task_id": "defect_011",
+      "run_id": "mma2a_defect_011_3a482f57",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 18.1899,
+      "request_bytes": 1349080,
+      "response_bytes": 8959,
+      "total_bytes": 1358039,
+      "ground_truth_action": "deny_warranty",
+      "predicted_action": "deny_warranty",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_011_3a482f57_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_011_3a482f57_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_011_3a482f57_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_011_3a482f57_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: deny_warranty\nReasoning: The customer's phone sustained water damage from being dropped in the toilet, which is explicitly excluded under the TechPhone X12's warranty terms.\nConfidence: 100%",
+      "data_source": {
+        "audio": "real",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:45:04.196967+00:00"
+    },
+    {
+      "task_id": "defect_012",
+      "run_id": "mma2a_defect_012_0a0b55ff",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 8.162,
+      "request_bytes": 248455,
+      "response_bytes": 4582,
+      "total_bytes": 253037,
+      "ground_truth_action": "initiate_replacement",
+      "predicted_action": "initiate_replacement",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_012_0a0b55ff_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_012_0a0b55ff_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_012_0a0b55ff_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_012_0a0b55ff_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: initiate_replacement\nReasoning: The kettle is experiencing a burning smell, which is explicitly noted as a safety hazard requiring immediate replacement with no repair attempts under warranty. The product is within its 2-year warranty period.\nConfidence: 100%",
+      "data_source": {
+        "audio": "real",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:45:12.866333+00:00"
+    },
+    {
+      "task_id": "assembly_001",
+      "run_id": "mma2a_assembly_001_f83ce2d9",
+      "mode": "mma2a",
+      "category": "assembly_guidance",
+      "modalities_required": [
+        "voice",
+        "text"
+      ],
+      "latency_seconds": 6.896,
+      "request_bytes": 439013,
+      "response_bytes": 3932,
+      "total_bytes": 442945,
+      "ground_truth_action": "provide_instructions",
+      "predicted_action": "provide_instructions",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_assembly_001_f83ce2d9_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_001_f83ce2d9_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_001_f83ce2d9_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: provide_instructions\nReasoning: The customer is asking for clarification on which screw to use during a specific step of product assembly, indicating a need for detailed guidance.\nConfidence: 100%",
+      "data_source": {
+        "audio": "real",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:45:20.269867+00:00"
+    },
+    {
+      "task_id": "assembly_002",
+      "run_id": "mma2a_assembly_002_1011d7bb",
+      "mode": "mma2a",
+      "category": "assembly_guidance",
+      "modalities_required": [
+        "voice",
+        "text"
+      ],
+      "latency_seconds": 5.6564,
+      "request_bytes": 339751,
+      "response_bytes": 4145,
+      "total_bytes": 343896,
+      "ground_truth_action": "provide_instructions",
+      "predicted_action": "provide_instructions",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_assembly_002_1011d7bb_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_002_1011d7bb_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_002_1011d7bb_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: provide_instructions\nReasoning: The customer is encountering difficulty with assembling the office chair's armrests, specifically needing clarification on direction, and the product context provides relevant assembly instructions.\nConfidence: 100%",
+      "data_source": {
+        "audio": "real",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:45:26.434731+00:00"
+    },
+    {
+      "task_id": "assembly_003",
+      "run_id": "mma2a_assembly_003_bdc77f26",
+      "mode": "mma2a",
+      "category": "assembly_guidance",
+      "modalities_required": [
+        "voice",
+        "text"
+      ],
+      "latency_seconds": 9.6889,
+      "request_bytes": 396703,
+      "response_bytes": 4428,
+      "total_bytes": 401131,
+      "ground_truth_action": "provide_instructions",
+      "predicted_action": "provide_instructions",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_assembly_003_bdc77f26_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_003_bdc77f26_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_003_bdc77f26_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: provide_instructions\nReasoning: The customer is asking for guidance on assembling a baby crib, specifically regarding mattress support height settings, which is an assembly/how-to question. The necessary instructions are available in the provided product context.\nConfidence: 95%",
+      "data_source": {
+        "audio": "real",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:45:36.629590+00:00"
+    },
+    {
+      "task_id": "assembly_004",
+      "run_id": "mma2a_assembly_004_662d2690",
+      "mode": "mma2a",
+      "category": "assembly_guidance",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 24.3096,
+      "request_bytes": 332205,
+      "response_bytes": 4254,
+      "total_bytes": 336459,
+      "ground_truth_action": "provide_instructions",
+      "predicted_action": "initiate_replacement",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "text_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support image, transcoding to text"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_assembly_004_662d2690_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_004_662d2690_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_004_662d2690_text",
+          "status": "timeout",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_004_662d2690_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: initiate_replacement\nReasoning: The product is defective out-of-box, missing a critical crossbar and containing incorrect screws, which prevents proper and safe assembly as confirmed by the analysis.\nConfidence: 95%",
+      "data_source": {
+        "audio": "real",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:46:01.445054+00:00"
+    },
+    {
+      "task_id": "assembly_005",
+      "run_id": "mma2a_assembly_005_babb342d",
+      "mode": "mma2a",
+      "category": "assembly_guidance",
+      "modalities_required": [
+        "voice",
+        "text"
+      ],
+      "latency_seconds": 8.7892,
+      "request_bytes": 172707,
+      "response_bytes": 3974,
+      "total_bytes": 176681,
+      "ground_truth_action": "provide_instructions",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_assembly_005_babb342d_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_005_babb342d_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_005_babb342d_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The customer is experiencing a wobbly desk after assembly, and the product context provides a direct troubleshooting guide for 'Wobble Issues' with specific steps.\nConfidence: 100%",
+      "data_source": {
+        "audio": "real",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:46:10.739912+00:00"
+    },
+    {
+      "task_id": "assembly_006",
+      "run_id": "mma2a_assembly_006_84357690",
+      "mode": "mma2a",
+      "category": "assembly_guidance",
+      "modalities_required": [
+        "voice",
+        "text"
+      ],
+      "latency_seconds": 8.83,
+      "request_bytes": 1117,
+      "response_bytes": 4827,
+      "total_bytes": 5944,
+      "ground_truth_action": "provide_instructions",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_assembly_006_84357690_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_006_84357690_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_006_84357690_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The system processed a query for 'Cam Lock Troubleshooting' and provided specific steps to diagnose and resolve common issues like a spinning cam, indicating a technical issue requiring troubleshooting guidance.\nConfidence: 95%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:46:20.071724+00:00"
+    },
+    {
+      "task_id": "assembly_007",
+      "run_id": "mma2a_assembly_007_264d3d40",
+      "mode": "mma2a",
+      "category": "assembly_guidance",
+      "modalities_required": [
+        "voice",
+        "text"
+      ],
+      "latency_seconds": 8.1059,
+      "request_bytes": 1046,
+      "response_bytes": 3949,
+      "total_bytes": 4995,
+      "ground_truth_action": "provide_instructions",
+      "predicted_action": "provide_instructions",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_assembly_007_264d3d40_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_007_264d3d40_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_007_264d3d40_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: provide_instructions\nReasoning: The customer's query is specifically about the slat configuration for a bunk bed, which is an assembly-related or 'how-to' question, requiring direct instructions.\nConfidence: 95%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:46:28.673211+00:00"
+    },
+    {
+      "task_id": "assembly_008",
+      "run_id": "mma2a_assembly_008_c0f30e06",
+      "mode": "mma2a",
+      "category": "assembly_guidance",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 8.9145,
+      "request_bytes": 1319,
+      "response_bytes": 4681,
+      "total_bytes": 6000,
+      "ground_truth_action": "provide_instructions",
+      "predicted_action": "provide_instructions",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_assembly_008_c0f30e06_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_008_c0f30e06_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_008_c0f30e06_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_008_c0f30e06_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: provide_instructions\nReasoning: The customer's query explicitly references 'Standard Ceiling Fan Wiri...', indicating an assembly or how-to question, for which providing instructions is the appropriate action based on internal guidelines.\nConfidence: 95%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:46:38.081248+00:00"
+    },
+    {
+      "task_id": "assembly_009",
+      "run_id": "mma2a_assembly_009_5a99c29e",
+      "mode": "mma2a",
+      "category": "assembly_guidance",
+      "modalities_required": [
+        "voice",
+        "text"
+      ],
+      "latency_seconds": 7.8673,
+      "request_bytes": 1124,
+      "response_bytes": 3915,
+      "total_bytes": 5039,
+      "ground_truth_action": "provide_instructions",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_assembly_009_5a99c29e_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_009_5a99c29e_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_009_5a99c29e_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The customer's query explicitly asks for 'FitPro Treadmill - Display Panel Troubleshooting', and the provided context includes the beginning of relevant troubleshooting steps.\nConfidence: 95%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:46:46.446100+00:00"
+    },
+    {
+      "task_id": "assembly_010",
+      "run_id": "mma2a_assembly_010_47201f5a",
+      "mode": "mma2a",
+      "category": "assembly_guidance",
+      "modalities_required": [
+        "voice",
+        "text"
+      ],
+      "latency_seconds": 10.5821,
+      "request_bytes": 1170,
+      "response_bytes": 3939,
+      "total_bytes": 5109,
+      "ground_truth_action": "provide_instructions",
+      "predicted_action": "provide_instructions",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_assembly_010_47201f5a_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_010_47201f5a_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_010_47201f5a_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: provide_instructions\nReasoning: The customer's query directly concerns 'Propane Connection Safety' for a GrillMaster Pro, indicating a need for assembly or safety instructions.\nConfidence: 95%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:46:57.527361+00:00"
+    },
+    {
+      "task_id": "assembly_011",
+      "run_id": "mma2a_assembly_011_b2a694e7",
+      "mode": "mma2a",
+      "category": "assembly_guidance",
+      "modalities_required": [
+        "voice",
+        "text"
+      ],
+      "latency_seconds": 9.1861,
+      "request_bytes": 1129,
+      "response_bytes": 4000,
+      "total_bytes": 5129,
+      "ground_truth_action": "provide_instructions",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_assembly_011_b2a694e7_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_011_b2a694e7_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_011_b2a694e7_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The customer's query explicitly states 'Sliding Door Troubleshooting' for a product, indicating a technical issue that requires guiding them through specific troubleshooting steps.\nConfidence: 95%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:47:07.213787+00:00"
+    },
+    {
+      "task_id": "assembly_012",
+      "run_id": "mma2a_assembly_012_f37b6e5b",
+      "mode": "mma2a",
+      "category": "assembly_guidance",
+      "modalities_required": [
+        "voice",
+        "text"
+      ],
+      "latency_seconds": 7.0544,
+      "request_bytes": 1154,
+      "response_bytes": 3925,
+      "total_bytes": 5079,
+      "ground_truth_action": "provide_instructions",
+      "predicted_action": "provide_instructions",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_assembly_012_f37b6e5b_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_012_f37b6e5b_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_assembly_012_f37b6e5b_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: provide_instructions\nReasoning: The customer's query was specifically about how to secure bed frame slats, which is an assembly or 'how-to' question.\nConfidence: 100%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:47:14.769234+00:00"
+    },
+    {
+      "task_id": "troubleshoot_001",
+      "run_id": "mma2a_troubleshoot_001_9e57a2d0",
+      "mode": "mma2a",
+      "category": "visual_troubleshooting",
+      "modalities_required": [
+        "image",
+        "text"
+      ],
+      "latency_seconds": 14.2119,
+      "request_bytes": 90351,
+      "response_bytes": 4632,
+      "total_bytes": 94983,
+      "ground_truth_action": "troubleshoot_step",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "text_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support image, transcoding to text"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_troubleshoot_001_9e57a2d0_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_001_9e57a2d0_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_001_9e57a2d0_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The customer is experiencing a 'no internet' issue with their router, specifically 'WAN disconnected' and 'DNS error', for which standard troubleshooting steps are available and recommended by all analyses.\nConfidence: 95%",
+      "data_source": {
+        "audio": "mock",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:47:29.485561+00:00"
+    },
+    {
+      "task_id": "troubleshoot_002",
+      "run_id": "mma2a_troubleshoot_002_62f2afe9",
+      "mode": "mma2a",
+      "category": "visual_troubleshooting",
+      "modalities_required": [
+        "image",
+        "text"
+      ],
+      "latency_seconds": 21.5818,
+      "request_bytes": 953434,
+      "response_bytes": 8844,
+      "total_bytes": 962278,
+      "ground_truth_action": "troubleshoot_step",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_troubleshoot_002_62f2afe9_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_002_62f2afe9_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_002_62f2afe9_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The washing machine displays an E3 error, identified as a door lock failure, for which specific troubleshooting steps (power cycle, check seal, firmly close door) are provided and should be attempted first.\nConfidence: 95%",
+      "data_source": {
+        "audio": "mock",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:47:51.578005+00:00"
+    },
+    {
+      "task_id": "troubleshoot_003",
+      "run_id": "mma2a_troubleshoot_003_2ea36229",
+      "mode": "mma2a",
+      "category": "visual_troubleshooting",
+      "modalities_required": [
+        "image",
+        "text"
+      ],
+      "latency_seconds": 19.7992,
+      "request_bytes": 1145,
+      "response_bytes": 3687,
+      "total_bytes": 4832,
+      "ground_truth_action": "troubleshoot_step",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "text_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support image, transcoding to text"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_troubleshoot_003_2ea36229_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_003_2ea36229_text",
+          "status": "timeout",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_003_2ea36229_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The primary problem described in the processed query is a 'FilaPrint 3D Printer Troubleshooting - Filament Jams', for which specific, non-service-requiring troubleshooting steps are available.\nConfidence: 90%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:48:11.879957+00:00"
+    },
+    {
+      "task_id": "troubleshoot_004",
+      "run_id": "mma2a_troubleshoot_004_5cf4dc68",
+      "mode": "mma2a",
+      "category": "visual_troubleshooting",
+      "modalities_required": [
+        "image",
+        "text"
+      ],
+      "latency_seconds": 23.5958,
+      "request_bytes": 613878,
+      "response_bytes": 9859,
+      "total_bytes": 623737,
+      "ground_truth_action": "troubleshoot_step",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_troubleshoot_004_5cf4dc68_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_004_5cf4dc68_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_004_5cf4dc68_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The customer reports a 'Heat Not Reaching Setpoint' issue, for which specific troubleshooting steps are available. The visual evidence shows the thermostat in pristine condition with no visible damage or error codes, contradicting any claim of user da",
+      "data_source": {
+        "audio": "mock",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:48:35.986247+00:00"
+    },
+    {
+      "task_id": "troubleshoot_005",
+      "run_id": "mma2a_troubleshoot_005_8933832c",
+      "mode": "mma2a",
+      "category": "visual_troubleshooting",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 8.9669,
+      "request_bytes": 1409,
+      "response_bytes": 4776,
+      "total_bytes": 6185,
+      "ground_truth_action": "troubleshoot_step",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_troubleshoot_005_8933832c_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_005_8933832c_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_005_8933832c_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_005_8933832c_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The customer's description of rapid clicking and dim lights perfectly matches the 'RAPID_CLICKING' known issue, which has clear jump-start instructions and does not require immediate service.\nConfidence: 95%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:48:45.457674+00:00"
+    },
+    {
+      "task_id": "troubleshoot_006",
+      "run_id": "mma2a_troubleshoot_006_4c317e98",
+      "mode": "mma2a",
+      "category": "visual_troubleshooting",
+      "modalities_required": [
+        "image",
+        "text"
+      ],
+      "latency_seconds": 20.3856,
+      "request_bytes": 1227,
+      "response_bytes": 4703,
+      "total_bytes": 5930,
+      "ground_truth_action": "troubleshoot_step",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "text_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support image, transcoding to text"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_troubleshoot_006_4c317e98_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_006_4c317e98_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_006_4c317e98_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: All analyses indicate a laptop keyboard issue (ghost typing/multi-key press) likely caused by dust or debris. Specific, non-invasive troubleshooting steps are available and recommended to address this common cause first.\nConfidence: 90%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:49:06.347639+00:00"
+    },
+    {
+      "task_id": "troubleshoot_007",
+      "run_id": "mma2a_troubleshoot_007_4f75d17f",
+      "mode": "mma2a",
+      "category": "visual_troubleshooting",
+      "modalities_required": [
+        "image",
+        "text"
+      ],
+      "latency_seconds": 5.4267,
+      "request_bytes": 1185,
+      "response_bytes": 4021,
+      "total_bytes": 5206,
+      "ground_truth_action": "troubleshoot_step",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "text_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support image, transcoding to text"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_troubleshoot_007_4f75d17f_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_007_4f75d17f_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_007_4f75d17f_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The request is to provide troubleshooting guidance, but the available 'Relevant Troubleshooting' steps are for a washing machine, not the LearnTab Kids Tablet. Without relevant troubleshooting steps or specific problem symptoms for the tablet, es",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:49:12.278538+00:00"
+    },
+    {
+      "task_id": "troubleshoot_008",
+      "run_id": "mma2a_troubleshoot_008_b88dd5b3",
+      "mode": "mma2a",
+      "category": "visual_troubleshooting",
+      "modalities_required": [
+        "image",
+        "text"
+      ],
+      "latency_seconds": 6.7294,
+      "request_bytes": 1170,
+      "response_bytes": 4201,
+      "total_bytes": 5371,
+      "ground_truth_action": "troubleshoot_step",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_troubleshoot_008_b88dd5b3_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_008_b88dd5b3_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_008_b88dd5b3_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The customer is experiencing a common operational issue (white film/residue) with the dishwasher, and detailed troubleshooting steps are available to resolve it without requiring a repair or replacement.\nConfidence: 95%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:49:19.511227+00:00"
+    },
+    {
+      "task_id": "troubleshoot_009",
+      "run_id": "mma2a_troubleshoot_009_2b3712c8",
+      "mode": "mma2a",
+      "category": "visual_troubleshooting",
+      "modalities_required": [
+        "image",
+        "text"
+      ],
+      "latency_seconds": 22.6177,
+      "request_bytes": 1328429,
+      "response_bytes": 10619,
+      "total_bytes": 1339048,
+      "ground_truth_action": "troubleshoot_step",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_troubleshoot_009_2b3712c8_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_009_2b3712c8_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_009_2b3712c8_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The monitor displays 'No Signal' without visible physical damage, indicating a technical issue. Both visual and text analyses recommend providing troubleshooting steps to identify the root cause (e.g., cable, input selection, source device) before con",
+      "data_source": {
+        "audio": "mock",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:49:42.641490+00:00"
+    },
+    {
+      "task_id": "troubleshoot_010",
+      "run_id": "mma2a_troubleshoot_010_7670f654",
+      "mode": "mma2a",
+      "category": "visual_troubleshooting",
+      "modalities_required": [
+        "image",
+        "text"
+      ],
+      "latency_seconds": 8.2972,
+      "request_bytes": 1178,
+      "response_bytes": 4096,
+      "total_bytes": 5274,
+      "ground_truth_action": "troubleshoot_step",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_troubleshoot_010_7670f654_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_010_7670f654_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_010_7670f654_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The provided analysis identifies a defrost system failure in a refrigerator with specific diagnostic steps and a manual defrost fix, which aligns with providing troubleshooting guidance.\nConfidence: 90%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:49:51.444164+00:00"
+    },
+    {
+      "task_id": "troubleshoot_011",
+      "run_id": "mma2a_troubleshoot_011_90272176",
+      "mode": "mma2a",
+      "category": "visual_troubleshooting",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 9.4988,
+      "request_bytes": 1488,
+      "response_bytes": 5152,
+      "total_bytes": 6640,
+      "ground_truth_action": "troubleshoot_step",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_troubleshoot_011_90272176_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_011_90272176_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_011_90272176_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_011_90272176_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The product context identifies a specific technical issue ('Door Reverses on Close') and indicates that diagnostic steps and actionable adjustments (e.g., 'Close force dial') are available to resolve it, directly recommending a troubleshooting step.\nC",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:50:01.447145+00:00"
+    },
+    {
+      "task_id": "troubleshoot_012",
+      "run_id": "mma2a_troubleshoot_012_94e25e6e",
+      "mode": "mma2a",
+      "category": "visual_troubleshooting",
+      "modalities_required": [
+        "image",
+        "text"
+      ],
+      "latency_seconds": 13.0054,
+      "request_bytes": 1212,
+      "response_bytes": 3770,
+      "total_bytes": 4982,
+      "ground_truth_action": "troubleshoot_step",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_troubleshoot_012_94e25e6e_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_012_94e25e6e_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_troubleshoot_012_94e25e6e_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The customer is experiencing a common issue with an espresso machine (channeling) for which specific troubleshooting steps, causes, and potential fixes are known and outlined.\nConfidence: 95%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:50:14.956200+00:00"
+    },
+    {
+      "task_id": "warranty_001",
+      "run_id": "mma2a_warranty_001_0376b4bd",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 7.844,
+      "request_bytes": 1368,
+      "response_bytes": 4500,
+      "total_bytes": 5868,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_001_0376b4bd_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_001_0376b4bd_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_001_0376b4bd_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_001_0376b4bd_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The customer transcript provides no information regarding a product issue or claim, and visual analysis failed. Without a stated problem, no specific action can be taken, requiring escalation to understand the customer's need.\nConfidence: 100%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:50:23.303097+00:00"
+    },
+    {
+      "task_id": "warranty_002",
+      "run_id": "mma2a_warranty_002_202f7434",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 22.384,
+      "request_bytes": 75369,
+      "response_bytes": 9106,
+      "total_bytes": 84475,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_002_202f7434_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_002_202f7434_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_002_202f7434_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_002_202f7434_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The provided evidence only includes the customer's name; there is no description of an issue, visual analysis, or any other context to determine a specific action.\nConfidence: 100%",
+      "data_source": {
+        "audio": "mock",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:50:46.192693+00:00"
+    },
+    {
+      "task_id": "warranty_003",
+      "run_id": "mma2a_warranty_003_aa90d7dd",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 8.768,
+      "request_bytes": 1137,
+      "response_bytes": 4855,
+      "total_bytes": 5992,
+      "ground_truth_action": "escalate_to_specialist",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "text_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support image, transcoding to text"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_003_aa90d7dd_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_003_aa90d7dd_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_003_aa90d7dd_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_003_aa90d7dd_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The customer's transcript provides no information about their issue, and there is no other evidence describing a specific problem with the product. Without knowing the customer's concern, further assistance requires escalation.\nConfidence: 95%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:50:55.467113+00:00"
+    },
+    {
+      "task_id": "warranty_004",
+      "run_id": "mma2a_warranty_004_362e68b8",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 7.422,
+      "request_bytes": 70831,
+      "response_bytes": 4534,
+      "total_bytes": 75365,
+      "ground_truth_action": "initiate_replacement",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "text_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support image, transcoding to text"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_004_362e68b8_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_004_362e68b8_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_004_362e68b8_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_004_362e68b8_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The customer's actual issue or complaint is completely missing from the provided evidence, making it impossible to determine an appropriate action like warranty claim, return, or troubleshooting.\nConfidence: 100%",
+      "data_source": {
+        "audio": "mock",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:51:03.394841+00:00"
+    },
+    {
+      "task_id": "warranty_005",
+      "run_id": "mma2a_warranty_005_7380f563",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 23.1383,
+      "request_bytes": 1821249,
+      "response_bytes": 10454,
+      "total_bytes": 1831703,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_005_7380f563_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_005_7380f563_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_005_7380f563_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_005_7380f563_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The provided evidence contains no description of a customer issue or product defect, only a generic transcript and an image analysis placeholder. A specialist is required to gather information about the customer's problem.\nConfidence: 100%",
+      "data_source": {
+        "audio": "mock",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:51:27.048912+00:00"
+    },
+    {
+      "task_id": "warranty_006",
+      "run_id": "mma2a_warranty_006_763ec197",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 7.2378,
+      "request_bytes": 1188,
+      "response_bytes": 4629,
+      "total_bytes": 5817,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "text_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support image, transcoding to text"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_006_763ec197_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_006_763ec197_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_006_763ec197_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_006_763ec197_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The voice transcript is entirely irrelevant to the product and does not describe any customer issue or defect. Without a clear problem statement, no specific action can be taken.\nConfidence: 100%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:51:34.792084+00:00"
+    },
+    {
+      "task_id": "warranty_007",
+      "run_id": "mma2a_warranty_007_0dcd0436",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 10.4921,
+      "request_bytes": 1319,
+      "response_bytes": 4577,
+      "total_bytes": 5896,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "text_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support image, transcoding to text"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_007_0dcd0436_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_007_0dcd0436_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_007_0dcd0436_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_007_0dcd0436_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The provided customer transcript is irrelevant and does not describe any product issue. Without understanding the customer's problem, no other action can be taken.\nConfidence: 100%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:51:45.787125+00:00"
+    },
+    {
+      "task_id": "warranty_008",
+      "run_id": "mma2a_warranty_008_7b8d8eb7",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 7.5942,
+      "request_bytes": 1199,
+      "response_bytes": 4636,
+      "total_bytes": 5835,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_008_7b8d8eb7_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_008_7b8d8eb7_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_008_7b8d8eb7_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_008_7b8d8eb7_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The provided transcript is irrelevant to a product issue, and there is no information about the customer's complaint or the product's condition. A specialist is needed to gather more information.\nConfidence: 100%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:51:53.883057+00:00"
+    },
+    {
+      "task_id": "warranty_009",
+      "run_id": "mma2a_warranty_009_a43442e9",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 7.8798,
+      "request_bytes": 1237,
+      "response_bytes": 4350,
+      "total_bytes": 5587,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_009_a43442e9_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_009_a43442e9_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_009_a43442e9_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_009_a43442e9_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The customer's specific issue or reason for contact is completely missing from the provided evidence, making it impossible to determine the appropriate action.\nConfidence: 100%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:52:02.266432+00:00"
+    },
+    {
+      "task_id": "warranty_010",
+      "run_id": "mma2a_warranty_010_679b0f49",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 9.0286,
+      "request_bytes": 1248,
+      "response_bytes": 4553,
+      "total_bytes": 5801,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "text_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support image, transcoding to text"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_010_679b0f49_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_010_679b0f49_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_010_679b0f49_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_010_679b0f49_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The transcript provides no information regarding a product issue, complaint, or request. Without any problem description, no specific action can be taken, requiring escalation to understand the customer's intent.\nConfidence: 90%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:52:11.798688+00:00"
+    },
+    {
+      "task_id": "warranty_011",
+      "run_id": "mma2a_warranty_011_5c80827a",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 18.8385,
+      "request_bytes": 652324,
+      "response_bytes": 8564,
+      "total_bytes": 660888,
+      "ground_truth_action": "deny_warranty",
+      "predicted_action": "deny_warranty",
+      "action_correct": true,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_011_5c80827a_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_011_5c80827a_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_011_5c80827a_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_011_5c80827a_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: deny_warranty\nReasoning: The visual analysis indicates physical damage to the product, which is explicitly excluded from the SoundPods Pro's warranty coverage.\nConfidence: 100%",
+      "data_source": {
+        "audio": "mock",
+        "image": "real"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:52:31.147818+00:00"
+    },
+    {
+      "task_id": "warranty_012",
+      "run_id": "mma2a_warranty_012_e94ab4cd",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 8.9519,
+      "request_bytes": 1233,
+      "response_bytes": 5764,
+      "total_bytes": 6997,
+      "ground_truth_action": "initiate_replacement",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_012_e94ab4cd_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_012_e94ab4cd_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_012_e94ab4cd_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_012_e94ab4cd_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The provided transcript is unrelated to a product issue, and image analysis failed. Without any information about the customer's specific problem or the product's condition, no action can be taken.\nConfidence: 100%",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:52:40.602661+00:00"
+    },
+    {
+      "task_id": "warranty_013",
+      "run_id": "mma2a_warranty_013_60bb5144",
+      "mode": "mma2a",
+      "category": "warranty_claim",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 7.4483,
+      "request_bytes": 1216,
+      "response_bytes": 4712,
+      "total_bytes": 5928,
+      "ground_truth_action": "approve_warranty",
+      "predicted_action": "escalate_to_specialist",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_warranty_013_60bb5144_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_013_60bb5144_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_013_60bb5144_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_warranty_013_60bb5144_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: escalate_to_specialist\nReasoning: The customer's statement 'What happened to the bird?' is irrelevant to product issues or warranty claims for the listed products, and no product defect or specific request was made. A specialist is needed to clarify the customer's intent.\nConfide",
+      "data_source": {
+        "audio": "mock",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:52:48.554584+00:00"
+    },
+    {
+      "task_id": "defect_013",
+      "run_id": "mma2a_defect_013_5a282c41",
+      "mode": "mma2a",
+      "category": "product_defect_report",
+      "modalities_required": [
+        "voice",
+        "image",
+        "text"
+      ],
+      "latency_seconds": 9.3431,
+      "request_bytes": 269710,
+      "response_bytes": 4558,
+      "total_bytes": 274268,
+      "ground_truth_action": "initiate_replacement",
+      "predicted_action": "troubleshoot_step",
+      "action_correct": false,
+      "routing_decisions": [
+        {
+          "part_type": "file",
+          "part_modality": "voice",
+          "destination_agent": "voice_agent",
+          "action": "native",
+          "reasoning": "Target agent supports voice natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "vision_agent",
+          "action": "transcode",
+          "reasoning": "Target agent doesn't support text, transcoding to text (unsupported transcoding text\u2192text)"
+        },
+        {
+          "part_type": "file",
+          "part_modality": "image",
+          "destination_agent": "vision_agent",
+          "action": "native",
+          "reasoning": "Target agent supports image natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        },
+        {
+          "part_type": "text",
+          "part_modality": "text",
+          "destination_agent": "text_agent",
+          "action": "native",
+          "reasoning": "Target agent supports text natively"
+        }
+      ],
+      "subtask_details": [
+        {
+          "id": "mma2a_defect_013_5a282c41_voice",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_013_5a282c41_image",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_013_5a282c41_text",
+          "status": "completed",
+          "duration": null
+        },
+        {
+          "id": "mma2a_defect_013_5a282c41_final",
+          "status": "completed",
+          "duration": null
+        }
+      ],
+      "response_text_preview": "Recommended Action: troubleshoot_step\nReasoning: The customer's complaint of a 'high-pitched wine' directly matches the known issue 'MOTOR_NOISE'. Specific troubleshooting steps are available to address this before considering a warranty claim.\nConfidence: 90%",
+      "data_source": {
+        "audio": "real",
+        "image": "mock"
+      },
+      "error": null,
+      "timestamp": "2026-04-13T23:52:58.403180+00:00"
+    }
+  ]
+}

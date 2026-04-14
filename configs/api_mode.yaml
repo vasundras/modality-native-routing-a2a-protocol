@@ -1,0 +1,55 @@
+# API Mode — No GPU needed, ~$8-15 total
+# Uses hosted model APIs for all agents
+
+mode: api
+
+agents:
+  voice:
+    backend: gemini
+    model: gemini-2.5-flash
+    input_modes: ["audio/wav", "audio/webm", "audio/mp3", "audio/mpeg"]
+    output_modes: ["text/plain"]
+    port: 8081
+
+  vision:
+    backend: gemini
+    model: gemini-2.5-flash
+    input_modes: ["image/png", "image/jpeg"]
+    output_modes: ["text/plain"]
+    port: 8082
+
+  text:
+    backend: together
+    model: meta-llama/Meta-Llama-3-70B-Instruct
+    input_modes: ["text/plain"]
+    output_modes: ["text/plain"]
+    port: 8083
+
+oracle:
+  backend: google
+  model: gemini-1.5-pro
+
+mar:
+  port: 8080
+  agent_card_cache_ttl_seconds: 60
+  force_text_mode: false  # set true to simulate Text-BN
+
+orchestrator:
+  port: 8084
+  max_parallel_subtasks: 3
+  timeout_seconds: 30
+
+benchmark:
+  data_dir: benchmark/data
+  num_tasks: 1200  # set to 50 for smoke test
+  categories:
+    - product_defect_report
+    - assembly_guidance
+    - visual_troubleshooting
+    - warranty_claim
+
+evaluation:
+  num_runs: 3
+  significance_test: bootstrap
+  bootstrap_resamples: 10000
+  output_dir: results

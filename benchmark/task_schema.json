@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CrossModal-CS Task",
+  "type": "object",
+  "required": ["task_id", "category", "modalities_required", "ground_truth_action"],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "pattern": "^(defect|assembly|troubleshoot|warranty)_\\d{3,4}$"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["product_defect_report", "assembly_guidance", "visual_troubleshooting", "warranty_claim"]
+    },
+    "modalities_required": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["voice", "image", "text"] },
+      "minItems": 2
+    },
+    "voice_input": {
+      "type": "string",
+      "description": "Path to WAV file (5-15s, 16kHz mono)"
+    },
+    "voice_transcript": {
+      "type": "string",
+      "description": "Ground truth transcript (for evaluation, not given to agents)"
+    },
+    "image_input": {
+      "type": "string",
+      "description": "Path to JPEG/PNG image (640x480)"
+    },
+    "image_description": {
+      "type": "string",
+      "description": "Ground truth image description (for evaluation)"
+    },
+    "text_context": {
+      "type": "string",
+      "description": "Product info, warranty terms, or troubleshooting tree"
+    },
+    "ground_truth_action": {
+      "type": "string",
+      "enum": [
+        "initiate_return",
+        "initiate_replacement",
+        "escalate_to_specialist",
+        "provide_instructions",
+        "deny_warranty",
+        "approve_warranty",
+        "troubleshoot_step",
+        "order_part"
+      ]
+    },
+    "ground_truth_reason": {
+      "type": "string",
+      "description": "Explanation of why this action is correct"
+    }
+  }
+}

@@ -2,10 +2,12 @@
 
 Runnable code for the **CrossModal-CS** benchmark and the **MMA2A** vs **Text-BN** pipelines described in the paper. Configuration for the published runs uses **Gemini 2.5 Flash** via `GOOGLE_API_KEY` (`configs/api_mode.yaml`).
 
+**Git:** This folder is the **repository root** for the companion repo (`origin` on GitHub). Clone it and work from the top level of the checkout—there is no `mma2a-experiments/` prefix inside the remote.
+
 ## Layout
 
 ```
-mma2a-experiments/
+# (repo root — same as this folder when cloned)
 ├── agents/              # Text, voice, vision A2A HTTP servers + agent cards
 ├── mar/                 # Modality-Aware Router (proxy)
 ├── orchestrator/        # Task decomposition + execution

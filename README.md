@@ -1,7 +1,7 @@
 # Modality-Native Routing in Agent-to-Agent Networks  
 ## A Multimodal A2A Protocol Extension
 
-**Companion repository** for the paper (April 2026). This repository contains the implementation, benchmark, configuration, and published run artifacts referenced in the work—not the paper PDF itself.
+**Companion repository** for the paper (April 2026). This repository contains the implementation, benchmark, configuration, and published run artifacts referenced in the work.
 
 ---
 

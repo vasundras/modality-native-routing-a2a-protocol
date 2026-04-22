@@ -3,6 +3,12 @@
 
 **Companion repository** for the paper (April 2026). This repository contains the implementation, benchmark, configuration, and published run artifacts referenced in the work.
 
+	arXiv:2604.12213 [cs.AI]
+ 	(or arXiv:2604.12213v1 [cs.AI] for this version)
+ 
+https://doi.org/10.48550/arXiv.2604.12213
+
+
 ---
 
 ## Summary of the paper
